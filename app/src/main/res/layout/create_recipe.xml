@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top|center"
+    tools:context=".CreateRecipe">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_wrapBehaviorInParent="horizontal_only">
+
+        <ImageView
+            android:id="@+id/imageEdit"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_columnSpan="3"
+            app:layout_row="1"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <EditText
+            android:id="@+id/update_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Category"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_columnSpan="3"
+            app:layout_row="2" />
+
+        <EditText
+            android:id="@+id/update_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name"
+            android:textSize="24sp"
+            app:layout_column="0"
+            app:layout_columnSpan="3"
+            app:layout_row="0" />
+
+        <EditText
+            android:id="@+id/update_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Area"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_columnSpan="3"
+            app:layout_row="3" />
+
+        <EditText
+            android:id="@+id/update_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:lines="10"
+            android:maxLines="10"
+            android:minLines="1"
+            android:scrollbars="vertical"
+            android:text="Instructions"
+            android:textSize="20sp"
+            app:layout_column="0"
+            app:layout_columnSpan="3"
+            app:layout_row="4" />
+
+        <Button
+            android:id="@+id/btnTakePicture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take Picture"
+            app:layout_column="0"
+            app:layout_row="5" />
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="400dp"
+            android:layout_height="300dp"
+            app:layout_column="0"
+            app:layout_columnSpan="3"
+            app:layout_row="1">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/previewView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="3:4"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:visibility="invisible"
+            app:layout_column="0"
+            app:layout_row="5" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="127dp"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:visibility="visible"
+            app:layout_column="2" />
+
+    </androidx.gridlayout.widget.GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
