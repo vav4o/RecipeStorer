@@ -20,7 +20,6 @@
         <activity android:name=".RandomRecipe"> </activity>
         <activity android:name=".CreateRecipe"> </activity>
         <activity android:name=".ShowMyRecipes"> </activity>
-        <activity android:name=".CheckRecipe"> </activity>
         <activity android:name=".EditRecipe"> </activity>
         <activity
             android:name=".MainActivity"
